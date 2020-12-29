@@ -6,8 +6,9 @@ import Playlist from './components/Playlist'
 import SignUp from './components/SignUp'
 import NavBar from './components/NavBar'
 import LogIn from './components/LogIn'
+import ArtistPage from './containers/ArtistPage'
 
-class App extends React.Component {
+class App extends React.Component { //tomorrow work on 'add to playlist' button 
 
   state = {
     user: null
@@ -74,6 +75,7 @@ class App extends React.Component {
 
         <Switch>
           <Route exact path='/' render={() => <Home />} />
+          <Route exact path='/artists/:id' render={() => <ArtistPage />} />
           <Route exact path='/playlist' render={() => <Playlist user={this.state.user} />} />
           <Route exact path='/profile' render={() => <Profile user={this.state.user} />} />
           <Route exact path='/signup' render={() => <SignUp signUpHandler={this.signUpHandler} />} />

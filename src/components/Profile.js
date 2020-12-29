@@ -7,8 +7,8 @@ class Profile extends React.Component {
             <React.Fragment>
                 {
                     this.props.user ?
-                        <div>
-                            User data
+                        <div style={{ display: 'flex', justifyContent: 'center' }}>
+                            <span>{this.props.user.username}</span>
                         </div>
 
                         :

@@ -25,7 +25,7 @@ class Home extends React.Component {
     render() {
         return (
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <div style={{ width: '80%', backgroundColor: 'black', display: 'grid', gridTemplateColumns: 'auto auto auto auto auto auto' }}>
+                <div style={{ borderRadius: '20px', width: '80%', backgroundColor: 'black', display: 'grid', gridTemplateColumns: 'auto auto auto auto auto auto' }}>
                     <ArtistContainer artists={this.state.artists} />
                 </div>
             </div>
