@@ -23,7 +23,7 @@ class NavBar extends React.Component {
                             <NavLink to='/'>
                                 <Button variant="light" size="lg">
                                     <div style={{ display: 'flex', alignItems: 'center' }}>
-                                        <Icon.House />
+                                        <Icon.House style={{ marginRight: 5 }} />
                                         <span>Home</span>
                                     </div>
                                 </Button>{' '}
@@ -31,7 +31,7 @@ class NavBar extends React.Component {
                             <NavLink to='/playlist'>
                                 <Button variant="light" size="lg">
                                     <div style={{ display: 'flex', alignItems: 'center' }}>
-                                        <Icon.MusicNoteList />
+                                        <Icon.MusicNoteList style={{ marginRight: 5 }} />
                                         <span>Playlist</span>
                                     </div>
                                 </Button>{' '}
@@ -40,9 +40,9 @@ class NavBar extends React.Component {
                                 <Button variant="light" size="lg">
                                     <div style={{ display: 'flex', alignItems: 'center' }}>
                                         {this.props.user.avatar ?
-                                            <img src={this.props.user.avatar} style={{ width: 30, borderRadius: '50%' }} />
+                                            <img src={this.props.user.avatar} style={{ width: 30, borderRadius: '50%', marginRight: 5 }} />
                                             :
-                                            <Icon.Person />
+                                            <Icon.Person style={{ marginRight: 5 }} />
                                         }
                                         <span id='username'>{this.props.user.username}</span>
                                     </div>
@@ -51,7 +51,7 @@ class NavBar extends React.Component {
                             <NavLink to='/'>
                                 <Button onClick={this.props.logOutHandler} variant='light' size='lg'>
                                     <div style={{ display: 'flex', alignItems: 'center' }}>
-                                        <Icon.DoorOpenFill />
+                                        <Icon.FileArrowDown style={{ marginRight: 5 }} />
                                         <span>Log Out</span>
                                     </div>
                                 </Button>
@@ -64,7 +64,7 @@ class NavBar extends React.Component {
                             <NavLink to='/'>
                                 <Button variant='light' size='lg'>
                                     <div style={{ display: 'flex', alignItems: 'center' }}>
-                                        <Icon.House />
+                                        <Icon.House style={{ marginRight: 5 }} />
                                         <span>Home</span>
                                     </div>
                                 </Button>
@@ -72,7 +72,7 @@ class NavBar extends React.Component {
                             <NavLink to='/signup'>
                                 <Button variant='light' size='lg'>
                                     <div style={{ display: 'flex', alignItems: 'center' }}>
-                                        <Icon.DoorOpen />
+                                        <Icon.DoorOpen style={{ marginRight: 5 }} />
                                         <span>Sign Up</span>
                                     </div>
                                 </Button>

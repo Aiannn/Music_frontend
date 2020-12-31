@@ -30,7 +30,8 @@ class ArtistPage extends React.Component {
 
     render() {
         return (
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: 50 }}>
+                <h2>{this.props.location.state.artistName}</h2>
                 <div style={{ borderRadius: '20px', width: '80%', backgroundColor: 'black', display: 'grid', gridTemplateColumns: 'auto auto auto' }}>
                     {this.getSongs()}
                 </div>

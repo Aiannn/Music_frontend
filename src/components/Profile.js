@@ -1,5 +1,5 @@
 import React from 'react'
-import { Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import { Tooltip } from 'react-bootstrap'
 import { Modal } from 'react-bootstrap'
@@ -48,7 +48,9 @@ class Profile extends React.Component {
                                     <img onClick={this.handleShow} style={{ width: 150, borderRadius: '50%' }} src={this.props.user.avatar ? this.props.user.avatar : '../../assets/EmptyUser.png'} />
                                 </OverlayTrigger>
                                 <span>{this.props.user.username}</span>
-                                <Button variant="dark">Go to my Playlist</Button>{' '}
+                                <Link to='/playlist'>
+                                    <Button variant="dark">Go to my Playlist</Button>{' '}
+                                </Link>
                             </div>
 
                             <Modal

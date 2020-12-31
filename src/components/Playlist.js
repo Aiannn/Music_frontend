@@ -14,7 +14,8 @@ class Playlist extends React.Component {
             <React.Fragment>
                 {
                     this.props.user ?
-                        <div style={{ display: 'flex', justifyContent: 'center' }}>
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: 50 }}>
+                            <h2>Playlist</h2>
                             <div style={{ borderRadius: '20px', width: '80%', backgroundColor: 'black', display: 'grid', gridTemplateColumns: 'auto auto auto' }}>
                                 {this.getFavoriteSongs()}
                             </div>
