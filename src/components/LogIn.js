@@ -36,9 +36,6 @@ class LogIn extends React.Component {
                         <Form.Label>Password</Form.Label>
                         <Form.Control onChange={this.changeHandler} value={this.state.password} name='password' type="password" placeholder="Password" />
                     </Form.Group>
-                    <Form.Group controlId="formBasicCheckbox">
-                        <Form.Check type="checkbox" label="I read Terms and Conditions" />
-                    </Form.Group>
                     <Button variant="dark" type="submit">
                         Log In
                     </Button>

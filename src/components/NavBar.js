@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom'
 
 import Button from 'react-bootstrap/Button'
 
+import * as Icon from 'react-bootstrap-icons'
+
 class NavBar extends React.Component {
     render() {
         return (
@@ -20,22 +22,38 @@ class NavBar extends React.Component {
                         <div style={{ marginLeft: 50 }}>
                             <NavLink to='/'>
                                 <Button variant="light" size="lg">
-                                    Home
+                                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                                        <Icon.House />
+                                        <span>Home</span>
+                                    </div>
                                 </Button>{' '}
                             </NavLink>
                             <NavLink to='/playlist'>
                                 <Button variant="light" size="lg">
-                                    Playlist
+                                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                                        <Icon.MusicNoteList />
+                                        <span>Playlist</span>
+                                    </div>
                                 </Button>{' '}
                             </NavLink>
                             <NavLink to='/profile'>
                                 <Button variant="light" size="lg">
-                                    {this.props.user.username}
+                                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                                        {this.props.user.avatar ?
+                                            <img src={this.props.user.avatar} style={{ width: 30, borderRadius: '50%' }} />
+                                            :
+                                            <Icon.Person />
+                                        }
+                                        <span id='username'>{this.props.user.username}</span>
+                                    </div>
                                 </Button>{' '}
                             </NavLink>
                             <NavLink to='/'>
                                 <Button onClick={this.props.logOutHandler} variant='light' size='lg'>
-                                    Log Out
+                                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                                        <Icon.DoorOpenFill />
+                                        <span>Log Out</span>
+                                    </div>
                                 </Button>
                             </NavLink>
                         </div>
@@ -45,12 +63,18 @@ class NavBar extends React.Component {
                         <div style={{ marginLeft: 50 }}>
                             <NavLink to='/'>
                                 <Button variant='light' size='lg'>
-                                    Home
+                                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                                        <Icon.House />
+                                        <span>Home</span>
+                                    </div>
                                 </Button>
                             </NavLink>
                             <NavLink to='/signup'>
                                 <Button variant='light' size='lg'>
-                                    Sign Up
+                                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                                        <Icon.DoorOpen />
+                                        <span>Sign Up</span>
+                                    </div>
                                 </Button>
                             </NavLink>
                         </div>

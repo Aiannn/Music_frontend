@@ -37,6 +37,26 @@ class App extends React.Component { //tomorrow work on 'add to playlist' button
     })
   }
 
+  updateAvatar = (imageUrl) => {
+    const token = localStorage.getItem('token')
+
+    fetch('http://localhost:3000/api/v1/profile', {
+      method: 'PATCH',
+      headers: {
+        'accept': 'application/json',
+        'content-type': 'application/json',
+        Authorization: `Bearer ${token}`
+      },
+      body: JSON.stringify({ avatar: imageUrl, username: this.state.user.username })
+    })
+      .then(resp => resp.json())
+      .then(data => {
+        this.setState({
+          user: data.user
+        })
+      })
+  }
+
   componentDidMount() {
     const token = localStorage.getItem('token')
     if (token) {
@@ -77,7 +97,7 @@ class App extends React.Component { //tomorrow work on 'add to playlist' button
           <Route exact path='/' render={() => <Home />} />
           <Route exact path='/artists/:id' render={() => <ArtistPage />} />
           <Route exact path='/playlist' render={() => <Playlist user={this.state.user} />} />
-          <Route exact path='/profile' render={() => <Profile user={this.state.user} />} />
+          <Route exact path='/profile' render={() => <Profile updateAvatar={this.updateAvatar} user={this.state.user} />} />
           <Route exact path='/signup' render={() => <SignUp signUpHandler={this.signUpHandler} />} />
           <Route exact path='/login' render={() => <LogIn logInHandler={this.logInHandler} />} />
         </Switch>
