@@ -24,7 +24,7 @@ class NavBar extends React.Component {
                                 <Button variant="light" size="lg">
                                     <div style={{ display: 'flex', alignItems: 'center' }}>
                                         <Icon.House style={{ marginRight: 5 }} />
-                                        <span>Home</span>
+                                        <span style={{ fontSize: 15 }}>Home</span>
                                     </div>
                                 </Button>{' '}
                             </NavLink>
@@ -32,7 +32,7 @@ class NavBar extends React.Component {
                                 <Button variant="light" size="lg">
                                     <div style={{ display: 'flex', alignItems: 'center' }}>
                                         <Icon.MusicNoteList style={{ marginRight: 5 }} />
-                                        <span>Playlist</span>
+                                        <span style={{ fontSize: 15 }}>Playlist</span>
                                     </div>
                                 </Button>{' '}
                             </NavLink>
@@ -40,11 +40,11 @@ class NavBar extends React.Component {
                                 <Button variant="light" size="lg">
                                     <div style={{ display: 'flex', alignItems: 'center' }}>
                                         {this.props.user.avatar ?
-                                            <img src={this.props.user.avatar} style={{ width: 30, borderRadius: '50%', marginRight: 5 }} />
+                                            <img src={this.props.user.avatar} style={{ width: 20, borderRadius: '50%', marginRight: 5 }} />
                                             :
                                             <Icon.Person style={{ marginRight: 5 }} />
                                         }
-                                        <span id='username'>{this.props.user.username}</span>
+                                        <span id='username' style={{ fontSize: 15 }}>{this.props.user.username}</span>
                                     </div>
                                 </Button>{' '}
                             </NavLink>
@@ -52,7 +52,7 @@ class NavBar extends React.Component {
                                 <Button onClick={this.props.logOutHandler} variant='light' size='lg'>
                                     <div style={{ display: 'flex', alignItems: 'center' }}>
                                         <Icon.FileArrowDown style={{ marginRight: 5 }} />
-                                        <span>Log Out</span>
+                                        <span style={{ fontSize: 15 }}>Log Out</span>
                                     </div>
                                 </Button>
                             </NavLink>
@@ -65,7 +65,7 @@ class NavBar extends React.Component {
                                 <Button variant='light' size='lg'>
                                     <div style={{ display: 'flex', alignItems: 'center' }}>
                                         <Icon.House style={{ marginRight: 5 }} />
-                                        <span>Home</span>
+                                        <span style={{ fontSize: 15 }}>Home</span>
                                     </div>
                                 </Button>
                             </NavLink>
@@ -73,7 +73,7 @@ class NavBar extends React.Component {
                                 <Button variant='light' size='lg'>
                                     <div style={{ display: 'flex', alignItems: 'center' }}>
                                         <Icon.DoorOpen style={{ marginRight: 5 }} />
-                                        <span>Sign Up</span>
+                                        <span style={{ fontSize: 15 }}>Sign Up</span>
                                     </div>
                                 </Button>
                             </NavLink>
